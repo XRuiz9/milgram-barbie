@@ -1,29 +1,34 @@
 #include <ESP32Servo.h>
 
-Servo myservo;  // create servo object to control a servo
+Servo eyes;  // create servo object to control a servo
+Servo fingers;
+
 // 16 servo objects can be created on the ESP32
 
 int pos = 0;    // variable to store the servo position
 // Recommended PWM GPIO pins on the ESP32 include 2,4,12-19,21-23,25-27,32-33 
-int servoPin = 18;
+int eyesPin = 18;
+int fingersPin = 14;
 int switchPin = 25;
 
-int switchValue = 0;
-
 void setup() {
-  myservo.setPeriodHertz(50);    // standard 50 hz servo
-  myservo.attach(servoPin); // attaches the servo on pin 18 to the servo object
   Serial.begin(9600);
+  
+  eyes.setPeriodHertz(50);    // standard 50 hz servo
+  eyes.attach(eyesPin); // attaches the servo on pin 18 to the servo object
+
+  fingers.setPeriodHertz(50);
+  fingers.attach(fingersPin);
+  
   pinMode(switchPin, INPUT);
-  // using default min/max of 1000us and 2000us
-  // different servos may require different min/max settings
-  // for an accurate 0 to 180 sweep
 }
 
 void loop() {
   switchValue = analogRead(switchPin);
   Serial.println(switchValue);
-  myservo.write(0);
+  
+  eyes.write(120);
+  fingers.write(120);
   delay(5);
 
   if (switchValue >= 4000) {
@@ -54,8 +59,10 @@ void loop() {
 }
 
 void shock() {
-  myservo.write(60);
+  eyes.write(30);
+  fingers.write(30);
   delay(5);
-  myservo.write(90);
+  eyes.write(0);
+  fingers.write(0);
   delay(5);
 }
