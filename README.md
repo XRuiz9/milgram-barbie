@@ -1,6 +1,6 @@
 # Milgram Barbie
 
-This piece is called Milgram Barbie and is inspired by Barbie styling heads and the Milgram Shock Experiment. This was primarily an exploration into mechanical puppetry, but also how the shock experiment changes when shifting the subject from human to inanimate object. Does the puppet's humanoid features evoke empathy and make us feel uneasy about torturing it? Or is it nothing more than cardboard and wires?
+This piece is called Milgram Barbie and is inspired by Barbie styling heads and the Milgram Shock Experiment. This was primarily an exploration into mechanical puppetry, but I was also wondering how the shock experiment changes when shifting the subject from human to inanimate object. Does the puppet's humanoid features evoke empathy and make us feel uneasy about torturing it? Or is it nothing more than cardboard and wires?
 
 ![Milgram Barbie Enclosure](https://github.com/XRuiz9/milgram-barbie/blob/master/promo.JPG)
 
